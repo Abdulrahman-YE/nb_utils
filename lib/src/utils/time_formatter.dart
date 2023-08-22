@@ -19,7 +19,7 @@ String formatTime(int timestamp) {
   } else
     result = countYears(difference);
 
-  return !result.startsWith("منذ") ? ' قبل' + result : result;
+  return !result.startsWith("منذ") ? 'قبل ' + result : result;
 }
 
 /// Converts the time difference to a number of seconds.
