@@ -19,7 +19,7 @@ String formatTime(int timestamp) {
   } else
     result = countYears(difference);
 
-  return !result.startsWith("J") ? result + ' ago' : result;
+  return !result.startsWith("منذ") ? ' قبل' + result : result;
 }
 
 /// Converts the time difference to a number of seconds.
@@ -27,7 +27,7 @@ String formatTime(int timestamp) {
 ///   returns ("Just now" OR "X seconds")
 String countSeconds(int difference) {
   int count = (difference / 1000).truncate();
-  return count > 1 ? count.toString() + ' seconds' : 'Just now';
+  return count > 1 ? count.toString() + ' ثانية' : 'منذ لحظات';
 }
 
 /// Converts the time difference to a number of minutes.
@@ -35,7 +35,7 @@ String countSeconds(int difference) {
 ///   returns ("1 minute" OR "X minutes")
 String countMinutes(int difference) {
   int count = (difference / 60000).truncate();
-  return count.toString() + (count > 1 ? ' minutes' : ' minute');
+  return count > 1 ? count.toString() + ' دقائق' : ' دقيقة';
 }
 
 /// Converts the time difference to a number of hours.
@@ -43,7 +43,7 @@ String countMinutes(int difference) {
 ///   returns ("1 hour" OR "X hours")
 String countHours(int difference) {
   int count = (difference / 3600000).truncate();
-  return count.toString() + (count > 1 ? ' hours' : ' hour');
+  return count > 1 ? count.toString() + ' ساعة' : 'ساعة';
 }
 
 /// Converts the time difference to a number of days.
@@ -51,7 +51,7 @@ String countHours(int difference) {
 ///   returns ("1 day" OR "X days")
 String countDays(int difference) {
   int count = (difference / 86400000).truncate();
-  return count.toString() + (count > 1 ? ' days' : ' day');
+  return count > 1 ? count.toString() + ' ايام' : 'يوم';
 }
 
 /// Converts the time difference to a number of weeks.
@@ -60,9 +60,9 @@ String countDays(int difference) {
 String countWeeks(int difference) {
   int count = (difference / 604800000).truncate();
   if (count > 3) {
-    return '1 month';
+    return 'شهر';
   }
-  return count.toString() + (count > 1 ? ' weeks' : ' week');
+  return count > 1 ? count.toString() + ' اسابيع' : 'اسبوع';
 }
 
 /// Converts the time difference to a number of months.
@@ -72,9 +72,9 @@ String countMonths(int difference) {
   int count = (difference / 2628003000).round();
   count = count > 0 ? count : 1;
   if (count > 12) {
-    return '1 year';
+    return 'سنة';
   }
-  return count.toString() + (count > 1 ? ' months' : ' month');
+  return count > 1 ? count.toString() + ' شهر' : 'شهر';
 }
 
 /// Converts the time difference to a number of years.
@@ -82,5 +82,5 @@ String countMonths(int difference) {
 ///   returns ("1 year" OR "X years")
 String countYears(int difference) {
   int count = (difference / 31536000000).truncate();
-  return count.toString() + (count > 1 ? ' years' : ' year');
+  return count > 1 ? count.toString() + ' سنة' : 'سنة';
 }
