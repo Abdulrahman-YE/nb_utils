@@ -9,6 +9,7 @@ var customDialogWidth = 220.0;
 const currencyRupee = '₹';
 const currencyDollar = '\$';
 const currencyEuro = '€';
+const currencyYe = "﷼";
 
 const MAIL_TO_PREFIX = 'mailto:';
 const TEL_PREFIX = 'tel:';
