@@ -1,4 +1,10 @@
-## 6.0.1
+## 6.0.6
+- Added subTitleMaxLine in SettingItemWidget
+## 6.0.5
+- Upgraded connectivity_plus to 5.0.0
+## 6.0.4
+- Added disabledTextColor in AppButton
+## 6.0.3
 - Added Title widget support in AppTextField widget
 - Update prefix and suffix String extensions
 - Removed PersistentTabs widget
