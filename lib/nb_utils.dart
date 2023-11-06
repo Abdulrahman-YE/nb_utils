@@ -132,7 +132,7 @@ late SharedPreferences sharedPreferences;
 
 ShapeBorder? defaultDialogShape;
 
-String defaultCurrencySymbol = currencyRupee;
+String defaultCurrencySymbol = currencyYe;
 
 LanguageDataModel? selectedLanguageDataModel;
 List<LanguageDataModel> localeLanguageList = [];
