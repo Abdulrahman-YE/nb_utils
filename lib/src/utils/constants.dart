@@ -38,3 +38,25 @@ const spacingMedium = 20;
 const spacingLarge = 26;
 const spacingXL = 30;
 const spacingXXL = 34;
+
+//region Chat GPT Config
+class ChatGPTConfig {
+  String chatGPTAPIEndPoint;
+  num temperature;
+  num maxTokens;
+  int topP;
+  int frequencyPenalty;
+  int presencePenalty;
+  String chatGPTModel;
+
+  ChatGPTConfig({
+    this.chatGPTAPIEndPoint = 'https://api.openai.com/v1/completions',
+    this.temperature = 0.7,
+    this.maxTokens = 1600,
+    this.topP = 1,
+    this.frequencyPenalty = 0,
+    this.presencePenalty = 0,
+    this.chatGPTModel = 'gpt-4-1106-preview',
+  });
+}
+//endregion
