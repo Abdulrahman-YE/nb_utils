@@ -33,6 +33,7 @@ TextStyle boldTextStyle({
     textBaseline: textBaseline,
     backgroundColor: backgroundColor,
     height: height,
+    overflow: TextOverflow.ellipsis,
   );
 }
 
@@ -66,6 +67,7 @@ TextStyle primaryTextStyle({
     textBaseline: textBaseline,
     backgroundColor: backgroundColor,
     height: height,
+    overflow: TextOverflow.ellipsis,
   );
 }
 
@@ -93,6 +95,7 @@ TextStyle secondaryTextStyle({
     letterSpacing: letterSpacing,
     fontStyle: fontStyle,
     decoration: decoration,
+    overflow: TextOverflow.ellipsis,
     decorationStyle: textDecorationStyle,
     decorationColor: decorationColor,
     wordSpacing: wordSpacing,
